@@ -1,29 +1,18 @@
 <% layout('layouts/boilerplate') %>
-<div class="row mt-3">
-        <h1 class="col-6 offset-3"> Login on WanderStay</h1>
-        <div class="col-6 offset-3"></div>
-        <form action="/login" method="POST" class="need-validation" novalidate>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input name="username"
-                    id="username"
-                    type="text"
-                    class="form-control"
-                     required
-                     />  
-                    
-            </div>
-            <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-            name="password"
-            id="password"
-            type="password"
-            class="form-control"
-            required
-            />
-         </div>
-         <button class=" btn btn-success">Login</button>
-        </form>
+<div class="auth-container">
+  <h2 class="auth-title">Welcome back to WanderStay</h2>
+  <form action="/login" method="POST" class="need-validation" novalidate>
+    <div class="mb-3">
+      <label for="username" class="form-label fw-semibold">Username</label>
+      <input name="username" id="username" type="text" class="form-control" placeholder="Enter your username" required />  
     </div>
+    <div class="mb-4">
+      <label for="password" class="form-label fw-semibold">Password</label>
+      <input name="password" id="password" type="password" class="form-control" placeholder="Enter your password" required />
+    </div>
+    <button class="btn btn-brand w-100 py-2 fs-5">Log In</button>
+  </form>
+  <div class="text-center mt-4">
+    <p class="text-muted">Don't have an account? <a href="/signup" style="color: var(--brand-color); text-decoration: none; font-weight: 600;">Sign up</a></p>
+  </div>
 </div>
